@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "fp.yeyu.terrain.plancsterraintweak.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "BooleanGameRulesAccessor",
+    "GameRulesAccessor",
+    "NoiseChunkGeneratorMixin",
+    "OreFeatureMixin",
+    "WorldMixin"
+  ],
+  "client": [
+    "client.GameMenuScreenReturnToMenuMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

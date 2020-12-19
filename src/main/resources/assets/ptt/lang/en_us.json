@@ -1,0 +1,18 @@
+{
+  "ptt.gamerule.title": "§6§lPlanc_'s Terrain Tweak (check out /ptt)",
+  "gamerule.pttBiomore": "BiomOre",
+  "todo":  "change biomore ore generation",
+  "gamerule.pttBiomore.description": "Makes ore generation with central tendency",
+  "gamerule.pttLayeredCave": "Layered Cave",
+  "gamerule.pttLayeredCave.description": "Blocks near bedrock will be full of granite, and blocks in the middle will be full of diorite.",
+  "gamerule.pttRiver": "River",
+  "gamerule.pttRiver.description": "Generate an Open Simplex river in the Overworld",
+  "gamerule.pttNetherHighway": "Nether Highway",
+  "gamerule.pttNetherHighway.description": "Generate an Open Simplex highway in the Nether",
+  "gamerule.pttTheEndPath": "The End Path",
+  "gamerule.pttTheEndPath.description": "Generate an Open Simplex path in The End Highlands",
+  "gamerule.pttTerrainType": "Terrain Type",
+  "gamerule.pttTerrainType.description": "(NOT YET IMPLEMENTED) Use custom terrain generation",
+  "ptt.export.error": "§cCannot export terrain configuration",
+  "ptt.export.successful": "§aExport successful.§r Drag §nptt-config.properties§r into your server mod directory."
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "plancs-terrain-tweak",
+  "version": "${version}",
+  "name": "Plancs Terrain Tweak",
+  "description": "Some tweak to the terrain generation",
+  "authors": [
+    "YeYu"
+  ],
+  "contact": {
+    "website": "https://github.com/ye-yu/fabric-mod-ptt",
+    "repo": "https://github.com/ye-yu/fabric-mod-ptt"
+  },
+  "license": "GPL-3.0",
+  "icon": "assets/plancs-terrain-tweak/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "fp.yeyu.terrain.plancsterraintweak.client.PlancsTerrainTweakClient"
+    ],
+    "main": [
+      "fp.yeyu.terrain.plancsterraintweak.PlancsTerrainTweak"
+    ]
+  },
+  "mixins": [
+    "plancs-terrain-tweak.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.10.8",
+    "fabric": "*",
+    "minecraft": "1.16.4"
+  }
+}
