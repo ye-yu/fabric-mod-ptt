@@ -34,7 +34,6 @@ public final class TerrainFeature {
 	public static void buildRiver(ChunkRegion region, Chunk chunk) {
 		if (!Config.doRiver(region.toServerWorld().getServer())) return;
 
-
 		if (riverSampler == null) {
 			riverSampler = new OctaveSimplexNoiseSampler(new ChunkRandom(region.getSeed()), Lists.newArrayList(-1));
 		}

@@ -10,6 +10,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.util.CuboidBlockIterator;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.StructureWorldAccess;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.chunk.ChunkGenerator;
 import net.minecraft.world.gen.feature.OreFeature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
@@ -78,6 +79,8 @@ public class OreFeatureMixin {
 	@Inject(method = "generate", at = @At("HEAD"), cancellable = true)
 	private void onGenerate(StructureWorldAccess world, ChunkGenerator chunkGenerator, Random random, BlockPos pos, OreFeatureConfig oreFeatureConfig, CallbackInfoReturnable<Boolean> cir) {
 		if (!Config.doBiomore(world.toServerWorld().getServer())) return;
+		final Biome.Category category = world.getBiome(pos).getCategory();
+		if (category == Biome.Category.NETHER || category == Biome.Category.THEEND) return;
 
 		final Block oreBlock = oreFeatureConfig.state.getBlock();
 		final double chance = random.nextDouble();
