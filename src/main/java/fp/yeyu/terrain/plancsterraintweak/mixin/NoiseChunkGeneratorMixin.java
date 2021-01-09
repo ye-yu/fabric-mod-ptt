@@ -12,11 +12,13 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(NoiseChunkGenerator.class)
 public class NoiseChunkGeneratorMixin {
-	@Inject(method = "buildSurface", at = @At("HEAD"))
+
+	@Inject(method = "buildSurface", at = @At("RETURN"))
 	private void onBuildSurface(ChunkRegion region, Chunk chunk, CallbackInfo ci) {
-		final Biome biome = region.getBiomeAccess().getBiome(chunk.getPos().getStartPos());
-		if (biome.getCategory() == Biome.Category.NETHER) TerrainFeature.buildHighway(region, chunk);
-		else if (biome.getCategory() == Biome.Category.THEEND) TerrainFeature.buildTheEndPath(region, chunk);
-		else TerrainFeature.buildRiver(region, chunk);
+		final Biome biome = region.getBiome(chunk.getPos().getStartPos());
+		final long seed = region.getSeed();
+		if (biome.getCategory() == Biome.Category.NETHER) TerrainFeature.buildHighway(seed, chunk);
+		else if (biome.getCategory() == Biome.Category.THEEND) TerrainFeature.buildTheEndPath(seed, chunk);
+		else TerrainFeature.buildRiver(seed, chunk, region::getBiome);
 	}
 }

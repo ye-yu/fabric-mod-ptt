@@ -2,7 +2,6 @@ package fp.yeyu.terrain.plancsterraintweak;
 
 import fp.yeyu.terrain.plancsterraintweak.config.Config;
 
-import java.io.File;
 import java.io.IOException;
 
 public final class Main {

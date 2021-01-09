@@ -6,8 +6,10 @@
   "mixins": [
     "BooleanGameRulesAccessor",
     "GameRulesAccessor",
+    "MinecraftServerMixin",
     "NoiseChunkGeneratorMixin",
     "OreFeatureMixin",
+    "PerlinNoiseSamplerMixin",
     "WorldMixin"
   ],
   "client": [
